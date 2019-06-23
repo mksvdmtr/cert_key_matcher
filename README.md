@@ -1,2 +1,4 @@
 Usage:
-  ./cert_key_matcher.sh {cert} {key}
+```
+./cert_key_matcher.sh {cert} {key}
+```
