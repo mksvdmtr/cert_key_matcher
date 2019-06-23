@@ -3,9 +3,11 @@
 RED='\033[0;31m'
 GREEN='\033[1;32m'
 
-if [ "$1" = "-h" ] || [ -z $1 ] || [ -z $2 ]
+if [ "$1" == "-h" ] || [ -z $1 ]
 then
+  echo
   echo "Usage: `basename $0` {cert} {key}"
+  echo
   exit 0
 else
 
@@ -15,9 +17,15 @@ else
 	if [ "$cert" == "$key" ]
 	then
 		printf "\n"
+		printf "$cert\n"
+		printf "$key\n"
+		printf "\n"
 		printf "${GREEN}Match!\n"
 		printf "\n"
 	else
+		printf "\n"
+		printf "$cert\n"
+		printf "$key\n"
 		printf "\n"
 		printf "${RED}Not match\n"
 		printf "\n"
